@@ -4,10 +4,16 @@ import random
 import time
 
 def inicio():
+ """Esta funcion arroja una frase aleatoria de la lista frases
+ que despues es guardada en la variable frase y asu vez
+ empieza a contabilizar el tiempo desde que es ejercutada"""
  frase.set(random.choice(frases))
  tiempo1.set(time.time())
 
 def fin():
+ """Esta funciona compruebra si la frase escrita es igual
+ a la solicitada, y si este es el caso, imprime por pantalla
+ cuando tiempo a trascurrido desde que inicio la prueba"""
  if frase.get() == frase_escrita.get() and frase.get():
   tiempo2 = time.time() 
   tiempo_final = str(tiempo2 - tiempo1.get())
