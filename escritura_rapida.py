@@ -35,7 +35,7 @@ tiempo1 = tk.DoubleVar()
 frases = ["Que bellos arboles hay aqui","Que bien nada ese pez",
           "El gato se asusta facilmente"]
 
-
+# Etiquetas con las indicaciones del la prueba
 etiqueta1 = tk.Label(root,text="¡Bienvenido a la prueba de escritura rapida!")
 etiqueta1.place(x=120,y=10)
 etiqueta1.config(bg="gray5",font=("Normal 12"),fg="white")
@@ -51,20 +51,26 @@ etiqueta3 = tk.Label(root,text="Escribe la frase de arriba:")
 etiqueta3.place(x=190,y=150)
 etiqueta3.config(bg="gray5",font=("Normal 12"),fg="white")
 
+# Entrada para que el usuario vea una frase aleatoria de la lista frases
 entrada1 = tk.Entry(root,bd=5,font="Normal 12",textvariable=frase,
                     width=22,bg="gray5",fg="white")
 entrada1.place(x=170,y=100)
 
+# Entrada para que el usuario escriba la frase 
 entrada2 = tk.Entry(root,bd=5,font="Normal 12",textvariable=frase_escrita,
                     width=22,bg="gray5",fg="white")
 entrada2.place(x=170,y=190)
 
+# Boton para inciar la prueba
 iniciar = tk.Button(root,text="Iniciar",font="Normal 10",bd=10,bg="gray5",
                    width=9,command=inicio,fg="white")
 iniciar.place(x=170,y=240)
 
+# Boton para terminar la prueba
 terminar = tk.Button(root,text="Terminar",font="Normal 10",bd=10,bg="gray5",
                    width=9,command=fin,fg="white")
 terminar.place(x=280,y=240)
 
+# Iniciamos el bucle de eventos para que la ventana que se actualice mientras 
+# El programa siga funcionando 
 root.mainloop()
